@@ -1,0 +1,501 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    color: #111;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.header {
+    width: 100%;
+    height: 90px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.desktop-nav a {
+    color: white;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    transition: .3s;
+}
+
+.desktop-nav a:hover {
+    color: #aaa;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.header-right button {
+    color: white;
+    font-size: 20px;
+    position: relative;
+}
+
+.account-shortcut {
+    color: #3395db;
+    font-size: 22px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.section-title {
+    text-align: center;
+    padding: 80px 20px 45px;
+}
+
+.section-title p {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 6% 90px;
+}
+
+.product {
+    width: 100%;
+}
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.product-image img {
+    height: 380px;
+    transition: .5s;
+}
+
+.product-image:hover img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 18px 0;
+}
+
+.product-info h3 {
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 12px;
+    color: #555;
+}
+
+.about-us {
+    width: 100%;
+    overflow: hidden;
+}
+
+.about-us img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.lookbook {
+    padding-bottom: 80px;
+}
+
+.lookbook-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 6%;
+}
+
+.lookbook-grid img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.lookbook-grid img:hover {
+    transform: scale(1.02);
+}
+
+.hero {
+    background: #f5f5f5;
+    padding: 70px 6%;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero-content > p {
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #777;
+    margin-bottom: 50px;
+}
+
+.collaboration-item {
+    margin-bottom: 65px;
+}
+
+.collaboration-item:last-child {
+    margin-bottom: 0;
+}
+
+.collaboration-item img {
+    width: 100%;
+    max-height: 650px;
+    object-fit: cover;
+    margin-bottom: 25px;
+}
+
+.collaboration-item h1 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.collaboration-item p {
+    max-width: 850px;
+    font-size: 13px;
+    line-height: 1.9;
+    color: #555;
+}
+
+.contact {
+    padding: 40px 20px 90px;
+    background: white;
+}
+
+.contact-form {
+    max-width: 550px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 12px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3395db;
+}
+
+.form-group textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: black;
+    color: white;
+    font-size: 11px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submit-btn:hover {
+    background: #3395db;
+}
+
+.find-us {
+    background: #000;
+    color: #3395db;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+@media (max-width: 1024px) {
+    .desktop-nav {
+        gap: 15px;
+    }
+
+    .desktop-nav a {
+        font-size: 9px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-image img {
+        height: 400px;
+    }
+
+    .lookbook-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .logo {
+        width: 85px;
+    }
+
+    .header-right {
+        gap: 15px;
+    }
+
+    .header-right button {
+        font-size: 18px;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 3000;
+        padding: 80px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        transition: .4s;
+    }
+
+    #menu-toggle:checked ~ .mobile-menu {
+        left: 0;
+    }
+
+    .mobile-menu a {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+    .mobile-menu .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 35px;
+        cursor: pointer;
+    }
+
+    .section-title {
+        padding: 60px 20px 35px;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+    }
+
+    .products {
+        padding: 0 20px 60px;
+        gap: 15px;
+    }
+
+    .product-image img {
+        height: 300px;
+    }
+
+    .lookbook-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+
+    .lookbook-grid img {
+        height: 350px;
+    }
+
+    .hero {
+        padding: 55px 20px;
+    }
+
+    .collaboration-item h1 {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0 15px;
+    }
+
+    .logo {
+        width: 70px;
+    }
+
+    .header-right {
+        gap: 10px;
+    }
+
+    .header-right button {
+        font-size: 16px;
+    }
+
+    .account-shortcut {
+        font-size: 18px;
+    }
+
+    .section-title h2 {
+        font-size: 21px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 12px 50px;
+    }
+
+    .product-image img {
+        height: 230px;
+    }
+
+    .product-info h3 {
+        font-size: 10px;
+    }
+
+    .product-info p {
+        font-size: 11px;
+    }
+
+    .lookbook-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lookbook-grid img {
+        height: 320px;
+    }
+
+    .hero {
+        padding: 45px 15px;
+    }
+
+    .hero-content > p {
+        font-size: 9px;
+        letter-spacing: 2px;
+        line-height: 1.8;
+    }
+
+    .collaboration-item img {
+        margin-bottom: 18px;
+    }
+
+    .collaboration-item h1 {
+        font-size: 18px;
+    }
+
+    .collaboration-item p {
+        font-size: 12px;
+    }
+}
